@@ -34,3 +34,5 @@ python3 -m http.server 8000
 ## Despliegue
 
 Publicado con GitHub Pages desde la rama `main`.
+
+<!-- deploy: 20260627-005535 -->
