@@ -37,6 +37,10 @@
 <body>
   <a class="skip-link" href="#productos">Saltar al contenido</a>
 
+  <!-- Fondo global: shader WebGL (Hologram Glitch adaptado a la marca) -->
+  <canvas id="bg-shader" aria-hidden="true"></canvas>
+  <div class="bg-veil" aria-hidden="true"></div>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
     <div class="container header__inner">
@@ -437,5 +441,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="shader.js" defer></script>
 </body>
 </html>
