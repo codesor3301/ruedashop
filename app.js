@@ -87,6 +87,30 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  /* ---- Product filters ---- */
+  var chips = document.querySelectorAll(".filters .chip");
+  var cards = document.querySelectorAll("#product-grid .card");
+  var emptyMsg = document.querySelector(".products__empty");
+  if (chips.length && cards.length) {
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var filter = chip.getAttribute("data-filter");
+        chips.forEach(function (c) {
+          var active = c === chip;
+          c.classList.toggle("is-active", active);
+          c.setAttribute("aria-pressed", String(active));
+        });
+        var shown = 0;
+        cards.forEach(function (card) {
+          var match = filter === "all" || card.getAttribute("data-lang") === filter;
+          card.classList.toggle("is-hidden", !match);
+          if (match) shown++;
+        });
+        if (emptyMsg) emptyMsg.hidden = shown !== 0;
+      });
+    });
+  }
+
   /* ---- Reveal on scroll (enhances already-visible content) ---- */
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var revealTargets = [

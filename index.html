@@ -82,11 +82,12 @@
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="kicker"><span class="kicker__dot"></span>código listo para producción</p>
-          <h1 class="hero__title">No reinventes la rueda.<br /><span class="grad">Solo apréndela a usar.</span></h1>
+          <p class="kicker"><span class="kicker__dot"></span>código probado, listo para entregar</p>
+          <h1 class="hero__title">Tú resuelves el problema.<br /><span class="grad">El código ya está escrito.</span></h1>
           <p class="hero__lede">
-            Sistemas de información, webs y código fuente listos para descargar, desplegar y usar.
-            Sin programar desde cero, sin soluciones complejas ni caras.
+            Son las 11 de la noche y la entrega es mañana. En vez de empezar de cero,
+            descarga un sistema que ya funciona, despliégalo con el video guía y preséntalo.
+            <strong>CRUDs, puntos de venta y webs en tu lenguaje, desde&nbsp;$3.</strong>
           </p>
           <div class="hero__cta">
             <a class="btn btn--primary btn--lg" href="#productos">Ver catálogo</a>
@@ -96,9 +97,9 @@
             </a>
           </div>
           <ul class="hero__proof" aria-label="Qué obtienes">
-            <li><strong>Descarga</strong> inmediata</li>
-            <li><strong>Despliegue</strong> guiado en video</li>
-            <li><strong>Desde&nbsp;$3</strong> por proyecto</li>
+            <li><strong>8+ stacks</strong> distintos</li>
+            <li><strong>Descarga</strong> al instante</li>
+            <li><strong>Video</strong> de despliegue incluido</li>
           </ul>
         </div>
 
@@ -115,118 +116,150 @@
       <div class="container">
         <header class="section__head">
           <div>
-            <p class="kicker kicker--mono">// catálogo</p>
-            <h2 class="section__title">Productos más vendidos</h2>
-            <p class="section__sub">Descarga, despliega y usa. Cada proyecto incluye instrucciones y video de despliegue.</p>
+            <p class="kicker kicker--mono">// el catálogo</p>
+            <h2 class="section__title">Elige tu stack. Descarga el proyecto.</h2>
+            <p class="section__sub">Cada proyecto incluye el archivo listo, las instrucciones de despliegue y su video paso a paso.</p>
           </div>
           <a class="btn btn--ghost" href="https://sinruedatecnologica.com/shop/" target="_blank" rel="noopener">Ver toda la tienda →</a>
         </header>
 
+        <!-- Filtros por lenguaje -->
+        <div class="filters" role="group" aria-label="Filtrar por lenguaje">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-filter="python" aria-pressed="false">Python</button>
+          <button class="chip" type="button" data-filter="php" aria-pressed="false">PHP</button>
+          <button class="chip" type="button" data-filter="csharp" aria-pressed="false">C#</button>
+          <button class="chip" type="button" data-filter="java" aria-pressed="false">Java</button>
+          <button class="chip" type="button" data-filter="laravel" aria-pressed="false">Laravel</button>
+          <button class="chip" type="button" data-filter="vb" aria-pressed="false">Visual Basic</button>
+        </div>
+
         <div class="grid products" id="product-grid">
-          <!-- cards injected by app.js from data, but rendered statically for no-JS / SEO -->
-          <article class="card">
-            <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-python-tkinter-sqlite/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
-              <img src="assets/products/python.jpg" alt="Portada del CRUD en Python Tkinter con SQLite" loading="lazy" width="300" height="300" />
-            </a>
-            <div class="card__body">
-              <span class="tag">Python · SQLite</span>
-              <h3 class="card__title">CRUD Python Tkinter + SQLite</h3>
-              <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-python-tkinter-sqlite/" target="_blank" rel="noopener">Ver producto</a>
-            </div>
-          </article>
 
-          <article class="card">
-            <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-php-sql-server-2022/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
-              <img src="assets/products/php.jpg" alt="Portada del CRUD en PHP con SQL Server 2022" loading="lazy" width="300" height="300" />
-            </a>
-            <div class="card__body">
-              <span class="tag">PHP · SQL Server</span>
-              <h3 class="card__title">CRUD PHP + SQL Server 2022</h3>
-              <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-php-sql-server-2022/" target="_blank" rel="noopener">Ver producto</a>
-            </div>
-          </article>
-
-          <article class="card">
+          <!-- FEATURED: más vendido -->
+          <article class="card card--feature" data-lang="csharp">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/punto-de-venta-c-windows-forms-mysql/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--top">★ Más vendido</span>
+              <span class="badge badge--off">−67%</span>
               <img src="assets/products/pos-csharp.jpg" alt="Portada del punto de venta en C# Windows Forms con MySQL" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">C# · MySQL</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="csharp">C#</span><span class="tag tag--db">Windows Forms · MySQL</span></div>
               <h3 class="card__title">Punto de Venta C# (Windows Forms) + MySQL</h3>
-              <div class="price"><span class="price__old">$15</span><span class="price__now">$5</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/punto-de-venta-c-windows-forms-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              <p class="card__desc">Sistema POS completo: ventas, inventario, clientes y reportes. El proyecto que más emprendedores eligen para arrancar su negocio.</p>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$15</span><span class="price__now">$5</span></div>
+                <a class="btn btn--primary" href="https://sinruedatecnologica.com/producto/punto-de-venta-c-windows-forms-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-lang="python">
+            <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-python-tkinter-sqlite/" target="_blank" rel="noopener">
+              <span class="badge badge--off">−70%</span>
+              <img src="assets/products/python.jpg" alt="Portada del CRUD en Python Tkinter con SQLite" loading="lazy" width="300" height="300" />
+            </a>
+            <div class="card__body">
+              <div class="card__tags"><span class="tag" data-lang-chip="python">Python</span><span class="tag tag--db">Tkinter · SQLite</span></div>
+              <h3 class="card__title">CRUD Python Tkinter + SQLite</h3>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-python-tkinter-sqlite/" target="_blank" rel="noopener">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-lang="php">
+            <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-php-sql-server-2022/" target="_blank" rel="noopener">
+              <span class="badge badge--off">−70%</span>
+              <img src="assets/products/php.jpg" alt="Portada del CRUD en PHP con SQL Server 2022" loading="lazy" width="300" height="300" />
+            </a>
+            <div class="card__body">
+              <div class="card__tags"><span class="tag" data-lang-chip="php">PHP</span><span class="tag tag--db">SQL Server 2022</span></div>
+              <h3 class="card__title">CRUD PHP + SQL Server 2022</h3>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-php-sql-server-2022/" target="_blank" rel="noopener">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-lang="java">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-java-sqlite/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--off">−70%</span>
               <img src="assets/products/java.jpg" alt="Portada del CRUD en Java con SQLite" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">Java · SQLite</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="java">Java</span><span class="tag tag--db">SQLite</span></div>
               <h3 class="card__title">CRUD Java + SQLite</h3>
-              <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-java-sqlite/" target="_blank" rel="noopener">Ver producto</a>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-java-sqlite/" target="_blank" rel="noopener">Ver</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-lang="vb">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-visual-basic-mysql/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--off">−70%</span>
               <img src="assets/products/vb.jpg" alt="Portada del CRUD en Visual Basic con MySQL" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">Visual Basic · MySQL</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="vb">Visual Basic</span><span class="tag tag--db">MySQL</span></div>
               <h3 class="card__title">CRUD Visual Basic + MySQL</h3>
-              <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-visual-basic-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-visual-basic-mysql/" target="_blank" rel="noopener">Ver</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-lang="laravel">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-laravel-mysql/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--off">−67%</span>
               <img src="assets/products/laravel.jpg" alt="Portada del CRUD en Laravel con MySQL" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">Laravel · MySQL</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="laravel">Laravel</span><span class="tag tag--db">MySQL</span></div>
               <h3 class="card__title">CRUD Laravel + MySQL</h3>
-              <div class="price"><span class="price__old">$12</span><span class="price__now">$4</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-laravel-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$12</span><span class="price__now">$4</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-laravel-mysql/" target="_blank" rel="noopener">Ver</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-lang="csharp">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-c-wpf-mysql/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--off">−70%</span>
               <img src="assets/products/wpf.jpg" alt="Portada del CRUD en C# WPF con MySQL" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">C# WPF · MySQL</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="csharp">C# WPF</span><span class="tag tag--db">MySQL</span></div>
               <h3 class="card__title">CRUD C# WPF + MySQL</h3>
-              <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-c-wpf-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$10</span><span class="price__now">$3</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-c-wpf-mysql/" target="_blank" rel="noopener">Ver</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-lang="java">
             <a class="card__media" href="https://sinruedatecnologica.com/producto/crud-jsp-mysql/" target="_blank" rel="noopener">
-              <span class="badge badge--sale">Oferta</span>
+              <span class="badge badge--off">−67%</span>
               <img src="assets/products/jsp.jpg" alt="Portada del CRUD en JSP con MySQL" loading="lazy" width="300" height="300" />
             </a>
             <div class="card__body">
-              <span class="tag">JSP · MySQL</span>
+              <div class="card__tags"><span class="tag" data-lang-chip="java">JSP</span><span class="tag tag--db">MySQL</span></div>
               <h3 class="card__title">CRUD JSP + MySQL</h3>
-              <div class="price"><span class="price__old">$12</span><span class="price__now">$4</span></div>
-              <a class="btn btn--primary btn--block" href="https://sinruedatecnologica.com/producto/crud-jsp-mysql/" target="_blank" rel="noopener">Ver producto</a>
+              <div class="card__foot">
+                <div class="price"><span class="price__old">$12</span><span class="price__now">$4</span></div>
+                <a class="btn btn--primary btn--sm" href="https://sinruedatecnologica.com/producto/crud-jsp-mysql/" target="_blank" rel="noopener">Ver</a>
+              </div>
             </div>
           </article>
+
+          <p class="products__empty" hidden>No hay proyectos en ese lenguaje todavía. <a href="https://sinruedatecnologica.com/shop/" target="_blank" rel="noopener">Pídelo aquí →</a></p>
         </div>
       </div>
     </section>
@@ -235,16 +268,25 @@
     <section class="section section--band why">
       <div class="container why__inner">
         <div class="why__copy">
-          <p class="kicker kicker--mono">// por qué</p>
-          <h2 class="section__title">¿Necesitas un sistema <span class="grad">ya</span>?</h2>
+          <p class="kicker kicker--mono">// por qué existimos</p>
+          <h2 class="section__title">Reinventar la rueda <span class="grad">cuesta caro</span>.</h2>
           <p class="why__lede">
-            La respuesta es sencilla. No necesitas programarlo ni buscar soluciones complejas y nada baratas.
-            Solo <strong>adquiere, descarga y despliega</strong>. Así de simple.
+            Cada CRUD que escribes desde cero te roba el mismo tiempo: configurar la base de datos,
+            cablear los formularios, depurar el mismo error de siempre. Horas que no vuelven.
           </p>
-          <a class="btn btn--primary btn--lg" href="#productos">Ver catálogo</a>
+          <p class="why__lede">
+            Aquí ese trabajo ya está hecho y probado. Tú te quedas con lo que importa:
+            <strong>entender cómo funciona, adaptarlo y entregarlo a tiempo</strong>.
+          </p>
+          <ul class="why__list">
+            <li>Sin contratar a un programador ni esperar cotizaciones de semanas.</li>
+            <li>Sin pelearte con frameworks que apenas vas aprendiendo.</li>
+            <li>Sin pagar cientos de dólares por algo que cuesta unos pocos.</li>
+          </ul>
+          <a class="btn btn--primary btn--lg" href="#productos">Ver el catálogo</a>
         </div>
         <figure class="why__art">
-          <img src="assets/seccion1.jpg" alt="Espacio de trabajo de desarrollo de software" loading="lazy" />
+          <img src="assets/seccion1.jpg" alt="Espacio de trabajo de desarrollo de software de madrugada" loading="lazy" />
         </figure>
       </div>
     </section>
