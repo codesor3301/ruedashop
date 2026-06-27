@@ -1,0 +1,7 @@
+# Tooling / editor
+.claude/
+.impeccable/
+.DS_Store
+
+# Original WordPress export (kept locally as reference, not deployed)
+bad-design.html

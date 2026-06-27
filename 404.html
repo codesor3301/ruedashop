@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página no encontrada — Sin Rueda Tecnológica</title>
+  <link rel="icon" type="image/png" href="assets/brand/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Geist:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .notfound { min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 2rem; }
+    .notfound__code { font-family: var(--font-mono); color: var(--accent); font-size: 1rem; letter-spacing: 0.1em; }
+    .notfound h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1; margin: 0.5rem 0 1rem; }
+    .notfound p { color: var(--muted); max-width: 44ch; margin: 0 auto 2rem; }
+  </style>
+  <script>
+    (function () { try { var t = localStorage.getItem('srt-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <main class="notfound">
+    <div>
+      <p class="notfound__code">// error 404</p>
+      <h1>Esta ruta no existe.</h1>
+      <p>Pero el código que buscas probablemente sí. Vuelve al inicio o entra directo a la tienda.</p>
+      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+        <a class="btn btn--primary btn--lg" href="./">Volver al inicio</a>
+        <a class="btn btn--ghost btn--lg" href="https://sinruedatecnologica.com/shop/" target="_blank" rel="noopener">Ir a la tienda</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
